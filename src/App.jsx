@@ -5,7 +5,7 @@ import Header from './component/Header'
 function App() {
   
   return (
-    <div className='bg-slate-50'>
+    <div>
       <Header></Header>
       <Outlet></Outlet>
     </div>

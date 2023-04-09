@@ -1,9 +1,14 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import JobCategory from './JobCategory';
 
 const Home = () => {
+    const jobs = useLoaderData()
+    
+    
     return (
         <div>
-           <section className='flex md:flex-row flex-col justify-around mt-6'>
+           <section className=' bg-slate-50 flex md:flex-row flex-col justify-around mt-6'>
             <div className="header-info lg:p-6 p-6">
                 <p className='text-6xl'><span>One Step</span> <br />
                  Closer To Your <br /> <span className='text-blue-400'>Dream Job</span> </p>
@@ -16,6 +21,17 @@ const Home = () => {
             </div>
 
            </section>
+
+            
+            <div  className=' grid md:grid-cols-4 items-center md:px-12 gap-5 mb-4 mt-4 '>
+                
+        {
+            jobs.map((jobCategory,index) => <JobCategory
+            jobCategory={jobCategory}
+            key={index}></JobCategory>)
+        }
+            </div>
+          
         </div>
     );
 };
