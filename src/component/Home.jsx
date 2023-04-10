@@ -36,9 +36,9 @@ const Home = () => {
             <div  className=' grid md:grid-cols-4 items-center md:px-12 gap-5 mb-4 mt-4 '>
                 
         {
-            jobs?.map((jobCategory,index) => <JobCategory
-            jobCategory={jobCategory}
-            key={index}></JobCategory>)
+           jobs.map((jobCategory,index) => <JobCategory
+           jobCategory={jobCategory}
+           key={index}></JobCategory>)
         }
             </div>
 

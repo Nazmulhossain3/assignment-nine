@@ -5,8 +5,8 @@ import { addToDb } from '../../../milestone-8-react/emajon-e-commerce/src/utilit
 const Feature = ({feature}) => {
     
    
- const {Company_Logo,Company_Name,Educational_Requirements,Experience,Job_Responsibility,
-   Job_description,Job_title,Location,Onsite,Remote,Salary,email,id,phone} = feature
+ const {Company_Logo,Company_Name,
+   Job_title,Location,Onsite,Remote,Salary,id,} = feature
 
 //    const dynamic = useParams()
   

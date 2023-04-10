@@ -30,7 +30,8 @@ const router = createBrowserRouter([
       },
       {
         path : '/JodDetails/:id',
-        element : <JodDetails></JodDetails>
+        element : <JodDetails></JodDetails>,
+        loader : ()=> fetch('company.json')
       },
       {
         path : '/Statistics',
