@@ -8,22 +8,9 @@ const Feature = ({feature}) => {
  const {Company_Logo,Company_Name,Educational_Requirements,Experience,Job_Responsibility,
    Job_description,Job_title,Location,Onsite,Remote,Salary,email,id,phone} = feature
 
-   const dynamic = useParams()
+//    const dynamic = useParams()
   
-   const [jobsId,setJobsId] = useState([])
-
-   useEffect(()=>{
-       fetch('company.json')
-       .then(res => res.json())
-       .then(data=> setJobsId(data))
-       
-    const job =  jobsId.find(jobId => jobId.id === dynamic.id)
-     setJobsId(job)
-     console.log(jobsId)
-    //   addToDb(id)
-
-   },[])
-   
+  
    
    return (
       
