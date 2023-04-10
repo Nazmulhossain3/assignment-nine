@@ -5,7 +5,7 @@ import Feature from './Feature';
 
 const Home = () => {
     const jobs = useLoaderData()
-    const [features,setFeatures] = useState([])
+    const [features,setFeatures] = useState([4])
 
     useEffect(()=>{
         fetch('company.json')
@@ -15,6 +15,11 @@ const Home = () => {
 
     },[])
     
+    const handleSeeAll = () => {
+      
+
+    }
+
     return (
         <div>
           
@@ -54,7 +59,7 @@ const Home = () => {
 
             </div>
 
-            <button className=' ml-96 bg-blue-500 text-white rounded-xl px-2 py-2 mt-6 ml-36 w-36 mb-12'>See All</button>
+            <button onClick={handleSeeAll} className=' ml-96 bg-blue-500 text-white rounded-xl px-2 py-2 mt-6 ml-36 w-36 mb-12'>See All</button>
 
         </div>
     );
