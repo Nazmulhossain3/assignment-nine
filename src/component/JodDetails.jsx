@@ -1,5 +1,6 @@
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import {CurrencyDollarIcon, DocumentTextIcon, EnvelopeIcon, MapIcon, MapPinIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import { addToDb } from './fakeDB';
 const JodDetails = () => {
    const {id} = useParams()
    const data = useLoaderData()
@@ -8,6 +9,10 @@ const JodDetails = () => {
    const {Job_description,Educational_Requirements,Experience,Job_Responsibility,
     Job_title,Salary,email,phone,Location} = details
     
+
+    const handleAddToCart = (id)=> {
+        addToDb(id)
+    }
 
 return (
         <div>
@@ -58,7 +63,7 @@ return (
            </span>
 
           <Link>
-          <button className='mx-auto border-2 flex justify-center px-2 py-1 mt-2
+          <button onClick={()=> handleAddToCart(id)} className='mx-auto border-2 flex justify-center px-2 py-1 mt-2
           bg-blue-500 text-white rounded-xl'>Apply Now</button>
          
           </Link>
