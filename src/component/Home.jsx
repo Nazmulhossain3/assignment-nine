@@ -54,6 +54,7 @@ const Home = () => {
 
             </div>
 
+            <button className=' ml-96 bg-blue-500 text-white rounded-xl px-2 py-2 mt-6 ml-36 w-36 mb-12'>See All</button>
 
         </div>
     );

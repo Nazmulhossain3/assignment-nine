@@ -33,6 +33,8 @@ const Feature = ({feature}) => {
             <button className='border-2 bg-blue-400 p-2 text-white mt-4
             rounded-lg'>View Details</button>
             </Link>
+
+            
      </div>
     );
 };

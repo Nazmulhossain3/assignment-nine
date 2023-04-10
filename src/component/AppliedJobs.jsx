@@ -19,13 +19,16 @@ const AppliedJobs = () => {
 
 console.log(cart)
     return (
-        <div>
-            <h1>this is AppliedJobs and </h1>
-            {
+        <div className='' >
+            <h1 className='text-2xl mt-12 text-center font-bold underline'> Applied Jobs </h1>
+         
+           <div className='px-24 py-12'>
+           {
                 cart.map(apply => <ShowApplyJob
                     apply={apply}
                     key={apply.id}></ShowApplyJob>)
             }
+           </div>
         </div>
     );
 };
