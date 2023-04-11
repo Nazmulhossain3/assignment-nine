@@ -3,10 +3,13 @@ import {CurrencyDollarIcon,  MapPinIcon, } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
 const ShowApplyJob = ({apply}) => {
-    console.log(apply)
-   const {Company_Name,Company_Logo,Job_title,Remote,Salary,Location,Onsite} = apply
+   
+   const {Company_Name,Company_Logo,Job_title,Remote,Salary,Location,Onsite,id} = apply
     return (
         <div>
+           
+           
+           
            <div className='flex md:flex-row mb-4 gap-6 px-36 border-2 py-12'>
            
             <img src={Company_Logo} alt="" className='md:w-36 md:h-36 ' />
@@ -34,7 +37,7 @@ const ShowApplyJob = ({apply}) => {
             </div>
 
                 
-            <Link>
+            <Link to={`/JodDetails/${id}`}>
            <button className=' relative bg-blue-500 text-white rounded-xl px-2 py-2 mt-16 ml-36'
            >View Details</button>
     

@@ -6,6 +6,7 @@ import Feature from './Feature';
 const Home = () => {
     const jobs = useLoaderData()
     const [features,setFeatures] = useState([4])
+    const [showAll,setShowAll] = useState(false)
 
     useEffect(()=>{
         fetch('company.json')
@@ -16,7 +17,7 @@ const Home = () => {
     },[])
     
     const handleSeeAll = () => {
-      
+      setShowAll(true)
 
     }
 
@@ -52,7 +53,7 @@ const Home = () => {
             <h1 className='text-center'>Explore thousands of job opportunities with all the information you need. Its your future</h1>
             <div className='bg-gray-100  grid md:grid-cols-4 items-center md:px-12 gap-5 mb-4 mt-12 gap-5'>
             {
-                features.map(feature => <Feature
+                features.slice(0,showAll ? 6 : 4).map(feature => <Feature
                     feature={feature}
                     key={feature.id} ></Feature>)
             }
