@@ -15,3 +15,6 @@
 # Applied Jobs and Blog route
 
 ➡ You can see the applied jobs route previous applied job information. Besides clicking the view details button you can go back job details page. The Blog button simply describes the four-question answer.
+
+# Link 
+➡ https://tranquil-alpaca-9b3be9.netlify.app/
